@@ -14,20 +14,20 @@ function Dev() {
       </Title>
       <Content>
         <Wrap>
-          <video src="cv/src/assets/videos/capture1.mp4" />
+          <a href="/vid0"><video src="cv/src/assets/videos/capture1.mp4"/></a>
         </Wrap>
         <Wrap>
-          <video src="cv/src/assets/videos/capture2.mp4" />
+        <a href="/vid1"><video src="cv/src/assets/videos/capture2.mp4"/></a>
         </Wrap>
         <Wrap>
-          <img src="cv/src/assets/showcase/dev1.jpg" alt=""/>
+          <a href="https://www.yoann-janssens.fr/cv/site/battle/index.html"><img src="cv/src/assets/showcase/dev1.jpg" alt=""/></a>
         </Wrap>
         <Wrap>
-        <a href="cv/src/assets/links/clock" target="blank" alt=""><img src="cv/src/assets/showcase/img11.jpg" alt=""/></a>
+        <a href="https://www.yoann-janssens.fr/cv/site/clock/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img11.jpg" alt=""/></a>
         </Wrap>
-        <Wrap>
+        {/* <Wrap>
           <img src="cv/src/assets/showcase/img.jpg" alt=""/>
-        </Wrap>
+        </Wrap> */}
       </Content>
     </Container>
   );
@@ -62,6 +62,23 @@ const Title = styled.div`
   &:hover {
       letter-spacing: 30px;
   }
+
+  @media (max-width: 750px) {
+    font-size: 18px;
+
+    &:hover {
+      letter-spacing: 20px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    font-size: 10px;
+    margin: 50px 50px -20px 50px;
+
+    &:hover {
+      letter-spacing: 0.5em;
+    }
+  }
 `;
 
 const Content = styled.div`
@@ -69,9 +86,20 @@ const Content = styled.div`
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));    
+    grid-gap: 40px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 30px;
+  }
 `;
 
 const Wrap = styled.div`
+  height: 20vh;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgb(0 0 0 / 25%) 0px 26px 30px -10px,
@@ -80,8 +108,8 @@ const Wrap = styled.div`
   cursor: pointer;
 
   img, video {
-    width: 100%;
-    height: 25vh;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     display: flex;
     align-items: center;
@@ -90,4 +118,12 @@ const Wrap = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (min-width: 1500px) {
+    height: 33vh;
+  }
+  
+  @media (max-width: 750px) {
+    height: 10vh;
+  } 
 `;

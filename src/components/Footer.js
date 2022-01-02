@@ -58,17 +58,24 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 9999;
 `;
 
 const More = styled.button`
+width: auto;
   color: #77787b;
   font-size: 8px;
   letter-spacing: 0.2em;
   line-height: 2em;
   border: none;
   background-color: transparent;
-  margin: 0px 60px 0px 60px;
+  margin: 0px 5% 0px 5%;
   cursor: pointer;
+
+  @media (max-width: 550px) {
+    margin: auto;
+    font-size: 6px;
+  }
 `;
 
 const Ctc = styled(More)``;

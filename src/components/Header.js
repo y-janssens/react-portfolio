@@ -20,7 +20,7 @@ function Header() {
           <SubTitle>Infographiste & Webdesigner</SubTitle>
         </Bounce>
       </Wrap>
-      <Buttons>
+      {/* <Buttons>
         <Btn1>
         <a href="#"><span>Portfolio</span></a>
         </Btn1>
@@ -33,7 +33,7 @@ function Header() {
         <Btn4>
         <a href="#"><span>Developpement</span></a>
         </Btn4>
-      </Buttons>
+      </Buttons> */}
       <Picture src="cv/src/assets/ui/u1.jpg" />
     </Container>
   );
@@ -52,6 +52,10 @@ const Container = styled.div`
   overflow: hidden;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25)) sepia(0.1);
   z-index: 1000;
+
+  @media (max-width: 500px) {
+    height: 6em;
+  }
 `;
 
 const Paper = styled.div`
@@ -68,7 +72,7 @@ const Paper = styled.div`
   font-size: 8px;
   background-color: transparent;
   z-index: 0;
-  transition: 500ms all;
+  transition: 500ms linear;
   overflow: hidden;
   user-select: none;
 
@@ -102,12 +106,29 @@ const Title = styled.div`
     border-right: none;
     transform: scaleX(1.15) scaleY(2);
   }
+
+  @media (max-width: 750px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 15px;    
+    margin-right: 5em;
+  }
 `;
 
 const SubTitle = styled(Title)`
   font-weight: 500;
   font-size: 10px;
   line-height: 0.1em;
+
+  @media (max-width: 750px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 500px) {
+    margin-right: 9.5em;
+  }
 `;
 
 const Picture = styled.img`
@@ -117,14 +138,24 @@ const Picture = styled.img`
   height: 7em;
   border-radius: 50%;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+
+  @media (max-width: 750px) {
+    width: 5em;
+    height: 5em;
+  }
+
+  @media (max-width: 500px) {
+    width: 4em;
+    height: 4em;
+  }
 `;
 
-const Buttons = styled.div`
+/*const Buttons = styled.div`
   position: absolute;
   top: 7.5em;
 `;
 
-const Btn1 = styled.button`
+ const Btn1 = styled.button`
   letter-spacing: 0.3em;
   font-family: "Rokkitt", serif;
   font-weight: 400;
@@ -142,4 +173,4 @@ const Btn1 = styled.button`
 
 const Btn2 = styled(Btn1)``;
 const Btn3 = styled(Btn1)``;
-const Btn4 = styled(Btn1)``;
+const Btn4 = styled(Btn1)``; */

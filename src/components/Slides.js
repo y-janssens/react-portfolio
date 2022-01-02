@@ -17,31 +17,31 @@ function Slides() {
         <Wrapper>
         <Carousel {...settings}>
           <Wrap>
-            <img src="cv/src/assets/showcase/img2.jpg" alt="" />
+          <a href="img1"><img src="cv/src/assets/showcase/img2.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img3.jpg" alt="" />
+            <a href="img2"><img src="cv/src/assets/showcase/img3.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img4.jpg" alt="" />
+            <a href="img3"><img src="cv/src/assets/showcase/img4.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img5.jpg" alt="" />
+            <a href="img4"><img src="cv/src/assets/showcase/img5.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img6.jpg" alt="" />
+            <a href="img5"><img src="cv/src/assets/showcase/img6.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img7.jpg" alt="" />
+            <a href="img6"><img src="cv/src/assets/showcase/img7.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img8.jpg" alt="" />
+            <a href="img7"><img src="cv/src/assets/showcase/img8.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img9.jpg" alt="" />
+            <a href="img8"><img src="cv/src/assets/showcase/img9.jpg" alt="" /></a>
           </Wrap>
           <Wrap>
-            <img src="cv/src/assets/showcase/img10.jpg" alt="" />
+            <a href="img9"><img src="cv/src/assets/showcase/img10.jpg" alt="" /></a>
           </Wrap>
         </Carousel>
       </Wrapper>
@@ -58,7 +58,7 @@ const Wrapper = styled.div`
 `;
 
 const Carousel = styled(Slider)`
-  width: 70vw;  
+  width: 70vw;
   ul li button {
     &:before {
       margin-top: 10px;
@@ -73,6 +73,17 @@ const Carousel = styled(Slider)`
   button {
     z-index: 1;
   }
+
+  .slick-dots li {
+    @media (max-width: 750px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    width: 50vw;
+  }
 `;
 
 const Wrap = styled.div`
@@ -80,6 +91,8 @@ const Wrap = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-45%);
+  border: none;
+  outline: none;
   img {
     border-radius: 8px;
     width: 90%;    

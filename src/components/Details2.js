@@ -2,9 +2,9 @@ import React from "react";
 import { useParams } from 'react-router-dom'
 import Bounce from 'react-reveal/Bounce';
 import styled from "styled-components";
-import images from "./data_img";
+import videos from "./data_v";
 
-function Details() {
+function Details2() {
   const { id } = useParams();
    
   return (
@@ -17,20 +17,19 @@ function Details() {
         <hr />
       </Maintitle>
       <Wrap>
-
-        <img src={"cv/src/assets/showcase/img" + images[id].id + ".jpg"} alt={images[id].title} />
+      <video src={"cv/src/assets/videos/capture" + videos[id].id + ".mp4"} width="100%" height="100%" preload="auto" controls="true"/>
         <Description>
-          <Title>{images[id].title}</Title>
-          <Desc>{images[id].description}</Desc>
+          <Title>{videos[id].title}</Title>
+          <Desc>{videos[id].description}</Desc>
 
-          <Soft>Logiciels utilisés</Soft>
+          <Soft>Langages et bibliothèques utilisés</Soft>
           <Desc>
-            {images[id].software[0]}<br/>
-            {images[id].software[1]}<br/>
-            {images[id].software[2]}<br/>
-            {images[id].software[3]}<br/>
-            {images[id].software[4]}<br/>
-            {images[id].software[5]}<br/>
+            {videos[id].software[0]}<br/>
+            {videos[id].software[1]}<br/>
+            {videos[id].software[2]}<br/>
+            {videos[id].software[3]}<br/>
+            {videos[id].software[4]}<br/>
+            {videos[id].software[5]}<br/>
           </Desc>
         </Description>
       </Wrap>
@@ -39,7 +38,7 @@ function Details() {
   
 }
 
-export default Details;
+export default Details2;
 
 const Container = styled.div`
   position: fixed;
@@ -111,7 +110,7 @@ const Wrap = styled.div`
   cursor: pointer;
   transition: 250ms linear;
 
-  img {
+  img, video {
     width: 100%;
     height: 100%;
     object-fit: cover;
