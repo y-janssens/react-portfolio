@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from 'react-router-dom'
 import Bounce from 'react-reveal/Bounce';
 import styled from "styled-components";
-import videos from "./data_v";
+import data from "../data";
 
 function Details2() {
   const { id } = useParams();
@@ -17,19 +17,19 @@ function Details2() {
         <hr />
       </Maintitle>
       <Wrap>
-      <video src={"cv/src/assets/videos/capture" + videos[id].id + ".mp4"} width="100%" height="100%" preload="auto" controls="true"/>
+      <video src={"cv/src/assets/videos/capture" + data.videos[id].id + ".mp4"} width="100%" height="100%" preload="auto" controls="true" autoplay="true" />
         <Description>
-          <Title>{videos[id].title}</Title>
-          <Desc>{videos[id].description}</Desc>
+          <Title>{data.videos[id].title}</Title>
+          <Desc>{data.videos[id].description}</Desc>
 
           <Soft>Langages et bibliothèques utilisés</Soft>
           <Desc>
-            {videos[id].software[0]}<br/>
-            {videos[id].software[1]}<br/>
-            {videos[id].software[2]}<br/>
-            {videos[id].software[3]}<br/>
-            {videos[id].software[4]}<br/>
-            {videos[id].software[5]}<br/>
+            {data.videos[id].software[0]}<br/>
+            {data.videos[id].software[1]}<br/>
+            {data.videos[id].software[2]}<br/>
+            {data.videos[id].software[3]}<br/>
+            {data.videos[id].software[4]}<br/>
+            {data.videos[id].software[5]}<br/>
           </Desc>
         </Description>
       </Wrap>
@@ -101,7 +101,7 @@ const Wrap = styled.div`
   top: 50%;
   left: 50%;
   width: 80%;
-  max-height: 80%;
+  max-height: 70%;
   transform: translate(-50%, calc(-50% - 1em));
   border-radius: 10px;
   overflow: hidden;
@@ -123,17 +123,17 @@ const Description = styled(Wrap)`
   position: absolute;
   width: 100%;
   height: 100%;
-  max-height: 1000%;
+  max-height: 100%;
   margin-top: 1em;
   color: #a69c7c;
   opacity: 0;
   font-family: 'Share Tech Mono', monospace;
 
-  &:hover {
+  /* &:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(2px);
-  }
+  } */
 `;
 
 const Title = styled.span`
@@ -142,6 +142,14 @@ const Title = styled.span`
   font-size: 1.1rem;
   padding-top: 0.5em;
   padding-bottom: 1.5em;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 const Desc = styled.span`
@@ -153,6 +161,16 @@ const Desc = styled.span`
   padding-left: 50%;
   padding-right: 0.8em;
   padding-bottom: 0.8em;
+
+  @media (max-width: 800px) {
+    font-size: 10px;
+    line-height: 175%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 8px;
+    line-height: 150%;
+  }
 `;
 
 const Soft = styled.span`
@@ -161,4 +179,12 @@ const Soft = styled.span`
   font-size: 0.9rem;
   padding-right: 0.8em;
   line-height: 300%;
+
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;

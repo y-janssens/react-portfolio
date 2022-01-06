@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from 'react-router-dom'
 import Bounce from 'react-reveal/Bounce';
 import styled from "styled-components";
-import images from "./data_img";
+import data from "../data";
 
 function Details() {
   const { id } = useParams();
@@ -18,19 +18,19 @@ function Details() {
       </Maintitle>
       <Wrap>
 
-        <img src={"cv/src/assets/showcase/img" + images[id].id + ".jpg"} alt={images[id].title} />
+        <img src={"cv/src/assets/showcase/img" + data.images[id].id + ".jpg"} alt={data.images[id].title} />
         <Description>
-          <Title>{images[id].title}</Title>
-          <Desc>{images[id].description}</Desc>
+          <Title>{data.images[id].title}</Title>
+          <Desc>{data.images[id].description}</Desc>
 
           <Soft>Logiciels utilisés</Soft>
           <Desc>
-            {images[id].software[0]}<br/>
-            {images[id].software[1]}<br/>
-            {images[id].software[2]}<br/>
-            {images[id].software[3]}<br/>
-            {images[id].software[4]}<br/>
-            {images[id].software[5]}<br/>
+            {data.images[id].software[0]}<br/>
+            {data.images[id].software[1]}<br/>
+            {data.images[id].software[2]}<br/>
+            {data.images[id].software[3]}<br/>
+            {data.images[id].software[4]}<br/>
+            {data.images[id].software[5]}<br/>
           </Desc>
         </Description>
       </Wrap>
@@ -102,7 +102,7 @@ const Wrap = styled.div`
   top: 50%;
   left: 50%;
   width: 80%;
-  max-height: 80%;
+  max-height: 70%;
   transform: translate(-50%, calc(-50% - 1em));
   border-radius: 10px;
   overflow: hidden;
@@ -124,10 +124,10 @@ const Description = styled(Wrap)`
   position: absolute;
   width: 100%;
   height: 100%;
-  max-height: 1000%;
+  max-height: 100%;
   margin-top: 1em;
   color: #a69c7c;
-  opacity: 0;
+  opacity: 1;
   font-family: 'Share Tech Mono', monospace;
 
   &:hover {
@@ -143,6 +143,14 @@ const Title = styled.span`
   font-size: 1.1rem;
   padding-top: 0.5em;
   padding-bottom: 1.5em;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 const Desc = styled.span`
@@ -154,6 +162,16 @@ const Desc = styled.span`
   padding-left: 50%;
   padding-right: 0.8em;
   padding-bottom: 0.8em;
+
+  @media (max-width: 800px) {
+    font-size: 10px;
+    line-height: 175%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 8px;
+    line-height: 150%;
+  }
 `;
 
 const Soft = styled.span`
@@ -162,4 +180,12 @@ const Soft = styled.span`
   font-size: 0.9rem;
   padding-right: 0.8em;
   line-height: 300%;
+
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
