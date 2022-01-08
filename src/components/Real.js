@@ -13,16 +13,16 @@ function Real() {
       </Title>
       <Content>
         <Wrap>
-          <a href="https://www.yoann-janssens.fr/cv/site/3D/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/real1.jpg" alt="" /></a>
+          <a href="https://y-janssens.github.io/cv/site/3D/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/real1.jpg" alt="" /></a>
         </Wrap>
         <Wrap>
-        <a href="https://www.yoann-janssens.fr/cv/site/Remparts/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/real2.jpg" alt="" /></a>
+        <a href="https://y-janssens.github.io/cv/site/Remparts/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/real2.jpg" alt="" /></a>
         </Wrap>
         <Wrap>
-        <a href="https://www.yoann-janssens.fr/cv/site/Herse/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img6.jpg" alt="" /></a>
+        <a href="https://y-janssens.github.io/cv/site/Herse/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img6.jpg" alt="" /></a>
         </Wrap>
         <Wrap>
-        <a href="https://www.yoann-janssens.fr/cv/site/space/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img10.jpg" alt="" /></a>
+        <a href="https://y-janssens.github.io/cv/site/space/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img10.jpg" alt="" /></a>
         </Wrap>
         {/* <Wrap>
           <img src="cv/src/assets/showcase/img.jpg" alt="" />

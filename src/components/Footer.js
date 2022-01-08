@@ -14,7 +14,7 @@ function Footer() {
   return (
     <Container>
       <More>
-        <a href="https://www.yoann-janssens.fr/cv" target="blank">
+        <a href="https://y-janssens.github.io/cv" target="blank">
           À propos
         </a>
       </More>

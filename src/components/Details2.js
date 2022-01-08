@@ -12,7 +12,9 @@ function Details2() {
       <Background />
       <Maintitle>
       <Bounce left cascade>
-        <a href="/">&#60; Accueil</a>
+          <Back>
+            <a href="/">&#60; Accueil</a>
+          </Back>
         </Bounce>
         <hr />
       </Maintitle>
@@ -186,5 +188,14 @@ const Soft = styled.span`
 
   @media (max-width: 600px) {
     font-size: 10px;
+  }
+`;
+
+const Back = styled.div`
+  position: fixed;
+  top: 13em;
+
+  @media (max-width: 500px) {
+    top: 15em;
   }
 `;

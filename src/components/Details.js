@@ -1,42 +1,51 @@
 import React from "react";
-import { useParams } from 'react-router-dom'
-import Bounce from 'react-reveal/Bounce';
+import { useParams } from "react-router-dom";
+import Bounce from "react-reveal/Bounce";
 import styled from "styled-components";
 import data from "../data";
 
 function Details() {
   const { id } = useParams();
-   
+
   return (
     <Container>
       <Background />
       <Maintitle>
-      <Bounce left cascade>
-        <a href="/">&#60; Accueil</a>
+        <Bounce left cascade>
+          <Back>
+            <a href="/">&#60; Accueil</a>
+          </Back>
         </Bounce>
         <hr />
       </Maintitle>
       <Wrap>
-
-        <img src={"cv/src/assets/showcase/img" + data.images[id].id + ".jpg"} alt={data.images[id].title} />
+        <img
+          src={"cv/src/assets/showcase/img" + data.images[id].id + ".jpg"}
+          alt={data.images[id].title}
+        />
         <Description>
           <Title>{data.images[id].title}</Title>
           <Desc>{data.images[id].description}</Desc>
 
           <Soft>Logiciels utilisés</Soft>
           <Desc>
-            {data.images[id].software[0]}<br/>
-            {data.images[id].software[1]}<br/>
-            {data.images[id].software[2]}<br/>
-            {data.images[id].software[3]}<br/>
-            {data.images[id].software[4]}<br/>
-            {data.images[id].software[5]}<br/>
+            {data.images[id].software[0]}
+            <br />
+            {data.images[id].software[1]}
+            <br />
+            {data.images[id].software[2]}
+            <br />
+            {data.images[id].software[3]}
+            <br />
+            {data.images[id].software[4]}
+            <br />
+            {data.images[id].software[5]}
+            <br />
           </Desc>
         </Description>
       </Wrap>
     </Container>
   );
-  
 }
 
 export default Details;
@@ -86,9 +95,9 @@ const Maintitle = styled.div`
     opacity: 0.75;
     transform: scaleY(1.25);
   }
-  
+
   &:hover {
-      letter-spacing: 15px;
+    letter-spacing: 15px;
   }
 
   @media (max-width: 500px) {
@@ -128,7 +137,7 @@ const Description = styled(Wrap)`
   margin-top: 1em;
   color: #a69c7c;
   opacity: 1;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
 
   &:hover {
     opacity: 1;
@@ -187,5 +196,14 @@ const Soft = styled.span`
 
   @media (max-width: 600px) {
     font-size: 10px;
+  }
+`;
+
+const Back = styled.div`
+  position: fixed;
+  top: 13em;
+
+  @media (max-width: 500px) {
+    top: 15em;
   }
 `;

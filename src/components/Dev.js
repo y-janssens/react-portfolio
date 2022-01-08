@@ -20,10 +20,10 @@ function Dev() {
         <a href="/vid1"><video src="cv/src/assets/videos/capture2.mp4"/></a>
         </Wrap>
         <Wrap>
-          <a href="https://www.yoann-janssens.fr/cv/site/battle/index.html"><img src="cv/src/assets/showcase/dev1.jpg" alt=""/></a>
+          <a href="https://y-janssens.github.io/site/battle/index.html"><img src="cv/src/assets/showcase/dev1.jpg" alt=""/></a>
         </Wrap>
         <Wrap>
-        <a href="https://www.yoann-janssens.fr/cv/site/clock/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img11.jpg" alt=""/></a>
+        <a href="https://y-janssens.github.io/site/clock/index.html" target="blank" alt=""><img src="cv/src/assets/showcase/img11.jpg" alt=""/></a>
         </Wrap>
         {/* <Wrap>
           <img src="cv/src/assets/showcase/img.jpg" alt=""/>
